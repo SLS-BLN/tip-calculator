@@ -7,7 +7,9 @@ export default function Reset({ onSetBill, onSetMyRating, onSetYourRating }) {
 
   return (
     <>
-      <button onClick={handleClick}>Reset</button>
+      <div className="reset">
+        <button onClick={handleClick}>Reset</button>
+      </div>
     </>
   );
 }

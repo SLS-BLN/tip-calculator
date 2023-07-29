@@ -28,3 +28,26 @@
   border-radius: 0.5rem;
   background-color: #022e19;
 }
+
+.total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #22076e;
+}
+
+.reset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+
+  background-color: #022e19;
+}

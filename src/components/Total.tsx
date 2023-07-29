@@ -4,7 +4,9 @@ export default function Total({ myRating, yourRating, bill }) {
 
   return (
     <>
-      <h2>You pay: ${total}</h2>
+      <div className="total">
+        <h2>You pay: ${total}</h2>
+      </div>
     </>
   );
 }

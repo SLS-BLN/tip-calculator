@@ -1,6 +1,10 @@
 export default function DiningBill({ bill, onBill }) {
   function handleInput(event) {
-    onBill(event.target.value);
+    const bill = event.target.value;
+    if (isNaN(bill)) {
+      return;
+    }
+    onBill(bill);
   }
 
   return (
