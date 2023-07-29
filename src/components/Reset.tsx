@@ -1,7 +1,13 @@
-export default function Reset() {
+export default function Reset({ onSetBill, onSetMyRating, onSetYourRating }) {
+  function handleClick() {
+    onSetBill("");
+    onSetMyRating(0);
+    onSetYourRating(0);
+  }
+
   return (
     <>
-      <button>Reset</button>
+      <button onClick={handleClick}>Reset</button>
     </>
   );
 }

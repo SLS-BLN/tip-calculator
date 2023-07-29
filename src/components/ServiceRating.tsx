@@ -1,4 +1,17 @@
 export default function ServiceRating({ onRating, children }) {
+  const POOR_TIP = 0.1;
+  const FAIR_TIP = 0.15;
+  const GOOD_TIP = 0.2;
+  const GREAT_TIP = 0.25;
+
+  const rating = [
+    { value: 0, label: "Select a rating" },
+    { value: POOR_TIP, label: "Poor" },
+    { value: FAIR_TIP, label: "Fair" },
+    { value: GOOD_TIP, label: "Good" },
+    { value: GREAT_TIP, label: "Great" },
+  ];
+
   function handleChange(event) {
     onRating(event.target.value);
   }
@@ -8,11 +21,11 @@ export default function ServiceRating({ onRating, children }) {
       <section className="rating">
         {children}
         <select id="rating" onChange={handleChange}>
-          <option value="0">Select a rating</option>
-          <option value="1">Poor</option>
-          <option value="2">Fair</option>
-          <option value="3">Good</option>
-          <option value="4">Great</option>
+          {rating.map((rating, index) => (
+            <option value={rating.value} key={index}>
+              {rating.label}
+            </option>
+          ))}
         </select>
       </section>
     </>

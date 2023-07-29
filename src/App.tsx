@@ -25,7 +25,11 @@ function App() {
         <label htmlFor="rating">How did your friend like the service? </label>
       </ServiceRating>
       <Total bill={bill} myRating={myRating} yourRating={yourRating} />
-      <Reset />
+      <Reset
+        onSetBill={setBill}
+        onSetMyRating={setMyRating}
+        onSetYourRating={setYourRating}
+      />
     </>
   );
 }
