@@ -1,10 +1,10 @@
-export default function ServiceRating({ onRating, children }) {
+export default function ServiceRating({ rating, onRating, children }) {
   const POOR_TIP = 0.1;
   const FAIR_TIP = 0.15;
   const GOOD_TIP = 0.2;
   const GREAT_TIP = 0.25;
 
-  const rating = [
+  const ratings = [
     { value: 0, label: "Select a rating" },
     { value: POOR_TIP, label: "Poor" },
     { value: FAIR_TIP, label: "Fair" },
@@ -20,11 +20,13 @@ export default function ServiceRating({ onRating, children }) {
     <>
       <section className="rating">
         {children}
-        <select id="rating" onChange={handleChange}>
-          {rating.map((rating, index) => (
-            <option value={rating.value} key={index}>
-              {rating.label}
-            </option>
+        <select id="rating" onChange={handleChange} value={rating}>
+          {ratings.map((rating, index) => (
+            <option
+              value={rating.value}
+              key={index}
+              label={rating.label}
+            ></option>
           ))}
         </select>
       </section>

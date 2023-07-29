@@ -13,15 +13,12 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>How much to tip?</h1>
-      </header>
-
+      <h1>How much to tip?</h1>
       <DiningBill onBill={setBill} bill={bill} />
-      <ServiceRating onRating={setMyRating}>
+      <ServiceRating rating={myRating} onRating={setMyRating}>
         <label htmlFor="rating">How was the service? </label>
       </ServiceRating>
-      <ServiceRating onRating={setYourRating}>
+      <ServiceRating rating={yourRating} onRating={setYourRating}>
         <label htmlFor="rating">How did your friend like the service? </label>
       </ServiceRating>
       <Total bill={bill} myRating={myRating} yourRating={yourRating} />
