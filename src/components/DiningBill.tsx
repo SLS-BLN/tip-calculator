@@ -9,10 +9,13 @@ export default function DiningBill({ bill, onBill }) {
 
   return (
     <>
-      <section className="bill">
-        <h2>Dining Bill</h2>
-        <label htmlFor="bill">How much was the bill? </label>
+      <section className="bill fd-section">
+        <h2 className="fd-section__title">Dining Bill</h2>
+        <label className="fd-form-label" htmlFor="bill">
+          How much was the bill?{" "}
+        </label>
         <input
+          className="fd-input"
           type="text"
           id="bill"
           value={bill}

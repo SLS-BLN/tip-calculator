@@ -7,8 +7,13 @@ export default function Reset({ onSetBill, onSetMyRating, onSetYourRating }) {
 
   return (
     <>
-      <div className="reset">
-        <button onClick={handleClick}>Reset</button>
+      <div className="fd-dynamic-page__toolbar">
+        <button
+          className="fd-button fd-button--emphasized"
+          onClick={handleClick}
+        >
+          Reset
+        </button>
       </div>
     </>
   );

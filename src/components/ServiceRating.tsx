@@ -20,7 +20,12 @@ export default function ServiceRating({ rating, onRating, children }) {
     <>
       <section className="rating">
         {children}
-        <select id="rating" onChange={handleChange} value={rating}>
+        <select
+          className="fd-select"
+          id="rating"
+          onChange={handleChange}
+          value={rating}
+        >
           {ratings.map((rating, index) => (
             <option
               value={rating.value}
