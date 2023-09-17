@@ -13,20 +13,22 @@ function App() {
 
   return (
     <>
-      <h1>How much to tip?</h1>
-      <DiningBill onBill={setBill} bill={bill} />
-      <ServiceRating rating={myRating} onRating={setMyRating}>
-        <label htmlFor="rating">How was the service? </label>
-      </ServiceRating>
-      <ServiceRating rating={yourRating} onRating={setYourRating}>
-        <label htmlFor="rating">How did your friend like the service? </label>
-      </ServiceRating>
-      <Total bill={bill} myRating={myRating} yourRating={yourRating} />
-      <Reset
-        onSetBill={setBill}
-        onSetMyRating={setMyRating}
-        onSetYourRating={setYourRating}
-      />
+      <div className="container ">
+        <h1 className="text-3xl font-semibold font-mono">How much to tip?</h1>
+        <DiningBill onBill={setBill} bill={bill} />
+        <ServiceRating rating={myRating} onRating={setMyRating}>
+          <label htmlFor="rating">How was the service? </label>
+        </ServiceRating>
+        <ServiceRating rating={yourRating} onRating={setYourRating}>
+          <label htmlFor="rating">How did your friend like the service? </label>
+        </ServiceRating>
+        <Total bill={bill} myRating={myRating} yourRating={yourRating} />
+        <Reset
+          onSetBill={setBill}
+          onSetMyRating={setMyRating}
+          onSetYourRating={setYourRating}
+        />
+      </div>
     </>
   );
 }

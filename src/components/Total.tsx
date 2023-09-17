@@ -4,7 +4,7 @@ export default function Total({ myRating, yourRating, bill }) {
 
   return (
     <>
-      <div className="total">
+      <div className="total container">
         <h2>You pay: ${total}</h2>
       </div>
     </>

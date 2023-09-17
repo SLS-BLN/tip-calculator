@@ -18,7 +18,7 @@ export default function ServiceRating({ rating, onRating, children }) {
 
   return (
     <>
-      <section className="rating">
+      <section className="rating container">
         {children}
         <select id="rating" onChange={handleChange} value={rating}>
           {ratings.map((rating, index) => (

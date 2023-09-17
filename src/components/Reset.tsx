@@ -1,3 +1,5 @@
+// import Button from "tailwindcss";
+
 export default function Reset({ onSetBill, onSetMyRating, onSetYourRating }) {
   function handleClick() {
     onSetBill("");
@@ -7,8 +9,13 @@ export default function Reset({ onSetBill, onSetMyRating, onSetYourRating }) {
 
   return (
     <>
-      <div className="reset">
-        <button onClick={handleClick}>Reset</button>
+      <div className="reset container bg-slate-50">
+        <button
+          className="focus:outline-none focus:ring focus:ring-violet-300"
+          onClick={handleClick}
+        >
+          Reset
+        </button>
       </div>
     </>
   );
