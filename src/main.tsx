@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 
-import "fundamental-styles/dist/theming/sap_horizon_dark.css";
-import "@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon_dark/css_variables.css";
+import "fundamental-styles/dist/theming/sap_horizon.css";
+import "@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/css_variables.css";
 
 import "fundamental-styles/dist/avatar.css";
 import "fundamental-styles/dist/bar.css";

@@ -4,7 +4,7 @@ import ServiceRating from "./components/ServiceRating";
 
 import Total from "./components/Total";
 import Reset from "./components/Reset";
-import ShellBar from "./components/Shellbar";
+import ShellBar from "./components/ShellBar";
 
 import "./App.css";
 
