@@ -1,3 +1,5 @@
+import { Icon, Input, FormItem, FormGroup } from "@ui5/webcomponents-react";
+
 export default function DiningBill({ bill, onBill }) {
   function handleInput(event) {
     const bill = event.target.value;
@@ -9,17 +11,17 @@ export default function DiningBill({ bill, onBill }) {
 
   return (
     <>
-      <section className="bill">
-        <h2>Dining Bill</h2>
-        <label htmlFor="bill">How much was the bill? </label>
-        <input
-          type="text"
-          id="bill"
-          value={bill}
-          onInput={handleInput}
-          placeholder="Bill value"
-        />
-      </section>
+      <FormGroup titleText="Dining Bill">
+        <FormItem label="How much was the bill">
+          <Input
+            icon={<Icon name="employee" />}
+            value={bill}
+            valueState="None"
+            onInput={handleInput}
+            placeholder="Bill value"
+          />
+        </FormItem>
+      </FormGroup>
     </>
   );
 }

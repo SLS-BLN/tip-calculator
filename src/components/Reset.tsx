@@ -1,4 +1,11 @@
-export default function Reset({ onSetBill, onSetMyRating, onSetYourRating }) {
+import { Button } from "@ui5/webcomponents-react";
+
+export default function Reset({
+  onSetBill,
+  onSetMyRating,
+  onSetYourRating,
+  props,
+}) {
   function handleClick() {
     onSetBill("");
     onSetMyRating(0);
@@ -7,8 +14,10 @@ export default function Reset({ onSetBill, onSetMyRating, onSetYourRating }) {
 
   return (
     <>
-      <div className="reset">
-        <button onClick={handleClick}>Reset</button>
+      <div slot={props.slot}>
+        <Button design="Emphasized" onClick={handleClick}>
+          Reset
+        </Button>
       </div>
     </>
   );

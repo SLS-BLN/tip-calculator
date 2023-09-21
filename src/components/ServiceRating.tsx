@@ -1,4 +1,4 @@
-export default function ServiceRating({ rating, onRating, children }) {
+export default function ServiceRating({ rating, onRating }) {
   const POOR_TIP = 0.1;
   const FAIR_TIP = 0.15;
   const GOOD_TIP = 0.2;
@@ -19,7 +19,6 @@ export default function ServiceRating({ rating, onRating, children }) {
   return (
     <>
       <section className="rating">
-        {children}
         <select id="rating" onChange={handleChange} value={rating}>
           {ratings.map((rating, index) => (
             <option
