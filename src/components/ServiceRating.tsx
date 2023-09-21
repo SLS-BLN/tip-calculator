@@ -1,3 +1,5 @@
+import { Select, Option } from "@ui5/webcomponents-react";
+
 export default function ServiceRating({ rating, onRating }) {
   const POOR_TIP = 0.1;
   const FAIR_TIP = 0.15;
@@ -13,21 +15,20 @@ export default function ServiceRating({ rating, onRating }) {
   ];
 
   function handleChange(event) {
-    onRating(event.target.value);
+    // onRating(event.target.value);
+    onRating(event.detail.selectedOption.dataset.value);
   }
 
   return (
     <>
       <section className="rating">
-        <select id="rating" onChange={handleChange} value={rating}>
+        <Select id="rating" onChange={handleChange}>
           {ratings.map((rating, index) => (
-            <option
-              value={rating.value}
-              key={index}
-              label={rating.label}
-            ></option>
+            <Option data-value={rating.value} key={index}>
+              {rating.label}
+            </Option>
           ))}
-        </select>
+        </Select>
       </section>
     </>
   );
