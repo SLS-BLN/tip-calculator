@@ -6,12 +6,14 @@ import Reset from "./components/Reset";
 import {
   Avatar,
   Bar,
+  BarDesign,
+  DynamicPage,
+  DynamicPageTitle,
   Form,
   FormGroup,
   FormItem,
-  Label,
-  Page,
   ShellBar,
+  Title,
 } from "@ui5/webcomponents-react"; // loads ui5-button wrapped in a ui5-webcomponents-react component
 
 import "./App.css";
@@ -26,14 +28,14 @@ function App() {
       <ShellBar primaryTitle="Tip Calculator">
         <Avatar colorScheme="Accent6" icon="employee" shape="Circle" size="L" />
       </ShellBar>
-      <Page
-        header={
-          <Bar>
-            <Label>How much do you want to tip?</Label>
-          </Bar>
+      <DynamicPage
+        headerTitle={
+          <DynamicPageTitle
+            header={<Title>How much do you want to tip</Title>}
+          />
         }
         footer={
-          <Bar design="Footer">
+          <Bar design={BarDesign.Footer}>
             <Reset
               onSetBill={setBill}
               onSetMyRating={setMyRating}
@@ -42,9 +44,8 @@ function App() {
             />
           </Bar>
         }
-        style={{
-          height: "500px",
-        }}
+        backgroundDesign="Transparent"
+        style={{ height: "90vh" }}
       >
         <Form>
           <DiningBill onBill={setBill} bill={bill} />
@@ -66,7 +67,7 @@ function App() {
           </FormGroup>
         </Form>
         <Total bill={bill} myRating={myRating} yourRating={yourRating} />
-      </Page>
+      </DynamicPage>
     </>
   );
 }
