@@ -51,14 +51,14 @@ function App() {
           <DiningBill onBill={setBill} bill={bill} />
 
           <FormGroup titleText="Rate the Service">
-            <FormItem label="How did your like the service?">
+            <FormItem label="How did your like the service">
               <ServiceRating
                 rating={myRating}
                 onRating={setMyRating}
               ></ServiceRating>
             </FormItem>
 
-            <FormItem label="How did your friend like the service?">
+            <FormItem label="How did your friend like the service">
               <ServiceRating
                 rating={yourRating}
                 onRating={setYourRating}
