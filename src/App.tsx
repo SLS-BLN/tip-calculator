@@ -15,11 +15,10 @@ import {
   FormGroup,
   FormItem,
   Label,
-  MessageStrip,
-  ObjectStatus,
   ShellBar,
   Title,
 } from "@ui5/webcomponents-react"; // loads ui5-button wrapped in a ui5-webcomponents-react component
+import { spacing } from "@ui5/webcomponents-react-base";
 
 import "./App.css";
 
@@ -37,7 +36,7 @@ function App() {
         headerContent={
           <DynamicPageHeader>
             <FlexBox wrap="Wrap">
-              <FlexBox direction="Column">
+              <FlexBox direction="Column" style={spacing.sapUiContentPadding}>
                 <Label>
                   <b>Poor:</b>10 percent
                 </Label>
