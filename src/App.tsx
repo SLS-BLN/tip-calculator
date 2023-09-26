@@ -30,7 +30,7 @@ function App() {
   const [yourRating, setYourRating] = useState(0);
 
   return (
-    <>
+    <div className="wrapper">
       <ShellBar primaryTitle="Tip Calculator">
         <Avatar colorScheme="Accent6" icon="employee" shape="Circle" size="L" />
       </ShellBar>
@@ -61,7 +61,7 @@ function App() {
           />
         }
         footer={
-          <Bar design={BarDesign.Footer}>
+          <Bar design={BarDesign.FloatingFooter}>
             <Reset
               onSetBill={setBill}
               onSetMyRating={setMyRating}
@@ -70,7 +70,7 @@ function App() {
             />
           </Bar>
         }
-        style={{ height: "90vh" }}
+        style={{ height: "94svh" }}
       >
         <Form>
           <DiningBill onBill={setBill} bill={bill} />
@@ -92,7 +92,7 @@ function App() {
         </Form>
         <Total bill={bill} myRating={myRating} yourRating={yourRating} />
       </DynamicPage>
-    </>
+    </div>
   );
 }
 
